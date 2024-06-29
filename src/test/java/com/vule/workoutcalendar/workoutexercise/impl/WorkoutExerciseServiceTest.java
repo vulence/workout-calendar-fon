@@ -87,7 +87,7 @@ class WorkoutExerciseServiceTest {
 
         List<GroupedExerciseDto> result = workoutExerciseService.getGroupedWorkoutExercises(1, 1);
         assertEquals(groupedExercisesDto.size(), result.size());
-        assertEquals(groupedExercisesDto.getFirst(), result.getFirst());
+        assertEquals(groupedExercisesDto.get(0), result.get(0));
     }
 
     @Test

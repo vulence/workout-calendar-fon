@@ -14,7 +14,7 @@
 	<name>workout-calendar</name>
 	<description>Calendar that allows tracking exercises for each workout</description>
 	<properties>
-		<java.version>21</java.version>
+		<java.version>19</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
