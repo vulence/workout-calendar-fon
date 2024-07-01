@@ -43,12 +43,14 @@ class WorkoutTest {
 
     @Test
     void testSetTitle() {
+        workout = new Workout();
         workout.setTitle("Chest day");
         assertEquals("Chest day", workout.getTitle());
     }
 
     @Test
     void testSetNotes() {
+        workout = new Workout();
         workout.setNotes("Easier workout");
         assertEquals("Easier workout", workout.getNotes());
     }
