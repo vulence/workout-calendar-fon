@@ -32,6 +32,24 @@ class MuscleGroupTest {
         assertEquals(muscleGroup.getDescription(), "Pectoralis major and pectoralis minor");
     }
 
+    @Test
+    void testSetId() {
+        muscleGroup.setId(1);
+        assertEquals(1, muscleGroup.getId());
+    }
+
+    @Test
+    void testSetName() {
+        muscleGroup.setName("Chest");
+        assertEquals("Chest", muscleGroup.getName());
+    }
+
+    @Test
+    void testSetDescription() {
+        muscleGroup.setDescription("Pectoralis minor");
+        assertEquals("Pectoralis minor", muscleGroup.getDescription());
+    }
+
     @ParameterizedTest
     @MethodSource("provideArgsForEquals")
     void testEquals(String name1, String description1, String name2, String description2, boolean eq) {

@@ -42,6 +42,18 @@ class WorkoutTest {
     }
 
     @Test
+    void testSetTitle() {
+        workout.setTitle("Chest day");
+        assertEquals("Chest day", workout.getTitle());
+    }
+
+    @Test
+    void testSetNotes() {
+        workout.setNotes("Easier workout");
+        assertEquals("Easier workout", workout.getNotes());
+    }
+
+    @Test
     void testNegativeDuration() {
         workout = new Workout("Chest day", LocalDate.now(), "Max intensity", -1, 5);
         Set<ConstraintViolation<Workout>> violations = validator.validate(workout);

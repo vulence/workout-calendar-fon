@@ -34,6 +34,30 @@ class ExerciseMuscleGroupTest {
         assertFalse(exerciseMuscleGroup.isPrimary());
     }
 
+    @Test
+    void testSetId() {
+        exerciseMuscleGroup.setId(1);
+        assertEquals(1, exerciseMuscleGroup.getId());
+    }
+
+    @Test
+    void testSetPrimary() {
+        exerciseMuscleGroup.setPrimary(true);
+        assertTrue(exerciseMuscleGroup.isPrimary());
+    }
+
+    @Test
+    void testSetExerciseId() {
+        exerciseMuscleGroup.setExerciseId(1);
+        assertEquals(1, exerciseMuscleGroup.getExerciseId());
+    }
+
+    @Test
+    void testSetMuscleGroupId() {
+        exerciseMuscleGroup.setMuscleGroupId(1);
+        assertEquals(1, exerciseMuscleGroup.getMuscleGroupId());
+    }
+
     @ParameterizedTest
     @MethodSource("provideArgsForEquals")
     void testEquals(Integer id1, Boolean primary1, Integer exerciseId1, Integer muscleGroupId1,

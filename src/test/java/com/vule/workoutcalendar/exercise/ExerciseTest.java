@@ -32,6 +32,30 @@ class ExerciseTest {
         assertEquals(exercise.getDescription(), "Compound chest exercise");
     }
 
+    @Test
+    void testSetId() {
+        exercise.setId(1);
+        assertEquals(1, exercise.getId());
+    }
+
+    @Test
+    void testSetName() {
+        exercise.setName("Bench press");
+        assertEquals("Bench press", exercise.getName());
+    }
+
+    @Test
+    void testSetDescription() {
+        exercise.setDescription("Compound chest exercise");
+        assertEquals("Compound chest exercise", exercise.getDescription());
+    }
+
+    @Test
+    void testSetImageUrl() {
+        exercise.setImageUrl("https://random.image/");
+        assertEquals("https://random.image/", exercise.getImageUrl());
+    }
+
     @ParameterizedTest
     @MethodSource("provideArgsForEquals")
     void testEquals(String name1, String description1, String name2, String description2, boolean eq) {
