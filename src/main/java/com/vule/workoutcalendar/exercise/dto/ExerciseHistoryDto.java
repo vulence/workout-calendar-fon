@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.time.LocalDateTime;
+import java.util.Objects;
 
 /**
  * A DTO used to transfer history data about an exercise. This includes a unique ID, the date when it was done,
@@ -46,5 +47,18 @@ public class ExerciseHistoryDto {
         }
 
         this.reps = reps;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        ExerciseHistoryDto that = (ExerciseHistoryDto) o;
+        return Objects.equals(id, that.id) && Objects.equals(date, that.date) && Objects.equals(weight, that.weight) && Objects.equals(sets, that.sets) && Objects.equals(reps, that.reps);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, date, weight, sets, reps);
     }
 }
