@@ -36,6 +36,24 @@ class WorkoutExerciseTest {
     }
 
     @Test
+    void testSetCompleted() {
+        workoutExercise.setCompleted(true);
+        assertTrue(workoutExercise.isCompleted());
+    }
+
+    @Test
+    void testSetWorkoutId() {
+        workoutExercise.setWorkoutId(1);
+        assertEquals(1, workoutExercise.getWorkoutId());
+    }
+
+    @Test
+    void testSetExerciseId() {
+        workoutExercise.setExerciseId(1);
+        assertEquals(1, workoutExercise.getExerciseId());
+    }
+
+    @Test
     void testNegativeWeightSetter() {
         assertThrows(IllegalArgumentException.class, () -> workoutExercise.setWeight(-1));
     }

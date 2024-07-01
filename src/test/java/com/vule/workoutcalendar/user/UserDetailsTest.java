@@ -94,6 +94,12 @@ class UserDetailsTest {
         assertEquals("External ID must be a positive integer.", exception.getMessage());
     }
 
+    @Test
+    void testSetGoals() {
+        userDetails.setGoals("Weight loss");
+        assertEquals("Weight loss", userDetails.getGoals());
+    }
+
     @ParameterizedTest
     @MethodSource("provideArgsForEquals")
     void testEquals(Integer weight1, Integer height1, String goals1, Integer externalId1,
